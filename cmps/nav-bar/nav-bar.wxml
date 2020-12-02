@@ -1,0 +1,12 @@
+<!--cmps/nav-bar/nav-bar.wxml-->
+
+<view class="container">
+    <view style="background-color:#42BD55;height:44px;" class="status-bar" ></view>
+    <view style="{{navBarStyle}}" class="nav-bar">
+        {{title}}
+        <view class="icons">
+            <image wx:if="{{back=='true'}}" class="back" src="/assets/imgs/back_icon.jpg" />
+            <image wx:if="{{home=='true'}}" class="home" src="/assets/imgs/home_icon.jpg" /> 
+        </view>
+    </view>
+</view>

@@ -1,0 +1,24 @@
+/* pages/list/list.wxss */
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap ;
+}
+
+.hide{
+    visibility: hidden;/* 占据空间但是看不见 */
+    width: 208rpx;
+    /* display: none; */
+    /* 不占据空间*/
+}
+
+.item{
+    margin: 0 15rpx;
+    /* display: inline-flex;
+    flex-direction: column; */
+    /* margin: 0 30rpx; */
+    /* width: 100rpx; */
+    /* margin-left: 30rpx; */
+    /* margin: 0 15rpx;左右都15 */
+}

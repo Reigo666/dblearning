@@ -1,0 +1,19 @@
+<!--pages/test1/test1.wxml-->
+<view class="cost-wrapper">
+    <view class="left">
+        <view class="text1">
+            赚跑腿费
+        </view>
+        <view class="text2">
+            人人都是跑腿费猎人
+        </view>
+    </view>
+    <view class="right">
+        <view class="text1">
+            查看全部
+        </view>
+        <view class="arrow">
+        </view>
+    </view>
+</view>
+  

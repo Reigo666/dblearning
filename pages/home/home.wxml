@@ -1,0 +1,53 @@
+<!--pages/home/home.wxml-->
+<nav-bar title="首页"
+    titleColor="#fff"
+    navBarColor="#42BD55"
+    statusBarColor="#42BD55"
+    back="true"
+    home="true"></nav-bar>
+<view>
+    <view class="header">
+        <view class="search-wrapper">
+            <image src="/assets/imgs/search_icon.jpg" />
+            搜索
+        </view>       
+    </view>
+    <view class="main">
+        <view wx:for="{{allMovies}}" wx:for-item="rowmovies" wx:key="unique" class="row"><!-- 一行全部内容含图片 -->
+            <view class="title-wrapper">
+                <view class="title">{{rowmovies.title}}</view>
+                <view class="more" data-index="{{index}}" bind:tap="viewMore">查看更多<view class="arrow"></view></view>
+            </view>
+ 
+            <scroll-view class="items" scroll-x="true"><!-- 所有图片 -->
+                <!-- <view wx:for="{{rowmovies.movies}}" wx:for-item="movie" wx:key="unique" class="item">每张图片
+                    <image class="photo" src="{{rowmovies.src}}" />
+                    <view class="title">123456789abcdef</view>
+                    <view class="score">
+                        <view class="stars">
+                            <block wx:for="{{movie.stars}}" wx:key="unique" wx:for-item="star">
+                                <image wx:if="{{star == 1}}" class="star" src="/assets/imgs/star1_icon.png" />
+                                <image wx:elif="{{star == 0.5}}" class="star" src="/assets/imgs/star0.5_icon.png" />
+                                <image wx:else  class="star" src="/assets/imgs/star0_icon.png" />
+                            </block>    
+                        </view>
+                        8.9
+                    </view>
+                </view>  -->
+
+                <movie-item 
+                class="item" 
+                wx:for="{{rowmovies.movies}}" 
+                wx:key="unique" 
+                wx:for-item="movie" 
+                movie="{{movie}}"
+                src1="{{rowmovies.src}}">
+
+                </movie-item>
+                  
+
+
+            </scroll-view>
+        </view>
+    </view>
+</view>

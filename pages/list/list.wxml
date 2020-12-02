@@ -1,0 +1,25 @@
+<!--pages/list/list.wxml-->
+    <view class="container">
+        <movie-item class="item"
+            wx:for="{{movies}}"
+            wx:key="unique"
+            wx:for-item="movie"
+            movie="{{movie}}"
+            src1="{{src}}"
+        >
+
+        </movie-item>
+
+        <view  wx:if="{{movies.length % 3 > 0}}" class="item hide"><!-- 每张图片 补空元素 -->
+            <image class="photo"  />
+            <view class="title"></view>
+            <view class="score"></view>
+        </view>
+
+        <view  wx:if="{{movies.length % 3 == 1}}" class="item hide"><!-- 每张图片 补空元素-->
+            <image class="photo"  />
+            <view class="title"></view>
+            <view class="score"></view>
+        </view>
+
+    </view>

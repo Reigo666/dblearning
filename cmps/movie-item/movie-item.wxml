@@ -1,0 +1,15 @@
+<!--cmps/movie-item/movie-tiem.wxml-->
+<view class="item" bind:tap="detail"><!-- 每张图片 -->
+    <image class="photo" src="{{src1}}" />
+    <view class="title">123456789abcdef</view>
+    <view class="score">
+        <view class="stars">
+            <block wx:for="{{movie.stars}}" wx:key="unique" wx:for-item="star">
+                <image wx:if="{{star == 1}}" class="star" src="/assets/imgs/star1_icon.png" />
+                <image wx:elif="{{star == 0.5}}" class="star" src="/assets/imgs/star0.5_icon.png" />
+                <image wx:else  class="star" src="/assets/imgs/star0_icon.png" />
+            </block>    
+        </view>
+        8.9
+    </view>
+</view>

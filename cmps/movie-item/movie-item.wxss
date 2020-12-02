@@ -1,0 +1,53 @@
+/* cmps/movie-item/movie-tiem.wxss */
+
+/* 样式 组件内部通用 */
+.item{
+    display: inline-flex;
+    flex-direction: column;
+    /* margin-left: 30rpx; */
+    /* margin: 0 15rpx;左右都15 */
+}
+
+
+/* 外部样式删掉 */
+/* .items .item:last-of-type{
+    margin-right: 30rpx;
+} */
+
+
+
+.item .photo{
+    width: 200rpx;/* 344 */
+    height: 287rpx;/* 494 */
+    margin-bottom: 15rpx; 
+    border-radius: 10rpx;
+    border: 4rpx solid #eee;  
+}
+
+.item .title{
+    width: 200rpx;
+    font-weight: bold;
+    font-size: 30rpx;
+    margin-bottom: 4rpx;
+    /* 超出内容宽度隐藏 */
+    overflow: hidden;
+    /* 超出内容换为省略号 */
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.score{
+    display: flex;
+    align-items: center;
+}
+
+.score .stars{
+    display: flex;
+    margin-right: 4rpx;
+
+}
+
+.stars .star{
+    width: 32rpx;
+    height: 32rpx;
+}
